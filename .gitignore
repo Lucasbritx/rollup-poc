@@ -1,0 +1,34 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+
+# Editor settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*
+
+# Mac system files
+*.DS_Store
+
+# Optional: if you use coverage tools like Jest
+coverage/
+
+# Optional: if you use eslint cache
+.eslintcache
+
+# Optional: logs
+*.log
