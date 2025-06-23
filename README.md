@@ -1,4 +1,4 @@
-# Rollup.js Starter
+# Rollup.js
 
 This project uses **Rollup.js** – a module bundler for JavaScript – to bundle modern JavaScript modules into a single file that can run in browsers or Node.js.
 
