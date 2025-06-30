@@ -1,5 +1,6 @@
 import React from 'react';
 
+// TODO add tests
 export const Input = ({ value, onChange, className, placeholder }) => {
   return (
     <input
