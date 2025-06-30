@@ -1,5 +1,6 @@
 import React from "react";
 
+// TODO add tests
 export const Button = ({ title, onClick, className }) => {
   return (
     <button className={className} onClick={onClick}>
@@ -7,7 +8,5 @@ export const Button = ({ title, onClick, className }) => {
     </button>
   );
 };
-
-Button.displayName = "Button";
 
 export default Button;

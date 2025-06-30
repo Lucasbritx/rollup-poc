@@ -13,6 +13,4 @@ export const Input = ({ value, onChange, className, placeholder }) => {
   );
 };
 
-Input.displayName = 'Input';
-
 export default Input;
