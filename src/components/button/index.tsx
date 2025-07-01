@@ -1,9 +1,12 @@
 import React from "react";
 
-// TODO add tests
-export const Button = ({ title, onClick, className }) => {
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  title: string;
+};
+
+export const Button = ({ title, ...props }: ButtonProps) => {
   return (
-    <button className={className} onClick={onClick}>
+    <button {...props}>
       {title}
     </button>
   );
