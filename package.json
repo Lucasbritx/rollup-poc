@@ -32,9 +32,11 @@
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
     "@types/react": "^19.1.8",
+    "jest": "^30.0.3",
     "rollup": "^4.44.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2"
+    "rollup-plugin-postcss": "^4.0.2",
+    "ts-jest": "^29.4.0"
   },
   "module": "dist/index.es.js"
 }
