@@ -1,14 +1,18 @@
-import React from 'react';
+import React from "react";
 
-// TODO add tests
-export const Checkbox = ({ checked, onChange, className, label }) => {
+type CheckboxProps = React.InputHTMLAttributes<HTMLInputElement> & {
+  label: string;
+  labelClassName?: string;
+};
+
+export const Checkbox = ({
+  labelClassName = "",
+  label,
+  ...props
+}: CheckboxProps) => {
   return (
-    <label className={className}>
-      <input
-        type="checkbox"
-        checked={checked}
-        onChange={onChange}
-      />
+    <label className={labelClassName}>
+      <input type="checkbox" {...props}/>
       {label}
     </label>
   );
