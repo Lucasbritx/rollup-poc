@@ -1,8 +1,14 @@
 import React from 'react';
 import './index.css';
 
-// TODO add tests
-export const Modal = ({ isOpen, onClose, children, className }) => {
+type ModalProps = {
+  isOpen: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+  className?: string;
+};
+
+export const Modal = ({ isOpen, onClose, children, className }: ModalProps) => {
   if (!isOpen) return null;
 
   return (
