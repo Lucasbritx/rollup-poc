@@ -24,14 +24,16 @@ export default {
       extensions: [".js", ".jsx", ".ts", ".tsx"],
     }),
     commonjs(),
+    postcss({
+      modules: false,
+      extract: false,
+      minimize: true,
+    }),
     babel({
       exclude: "node_modules/**",
       babelHelpers: "bundled",
       extensions: [".js", ".jsx", ".ts", ".tsx"],
       presets: ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
-    }),
-    postcss({
-      modules: true,
     }),
     terser(),
   ],

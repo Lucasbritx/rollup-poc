@@ -8,6 +8,9 @@ module.exports = {
   setupFilesAfterEnv: ["@testing-library/jest-dom"],
   testRegex: "/__tests__/.*\\.(test|spec)\\.[jt]sx?$",
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+  moduleNameMapper: {
+    "\\.(css)$": "identity-obj-proxy"
+  },
   collectCoverage: true,
   coverageDirectory: "coverage",
   coveragePathIgnorePatterns: ["/node_modules/"],
