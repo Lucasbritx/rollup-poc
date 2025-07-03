@@ -5,14 +5,17 @@ type ModalProps = {
   isOpen: boolean;
   onClose?: () => void;
   children: React.ReactNode;
-  className?: string;
 };
 
-export const Modal = ({ isOpen, onClose, children, className }: ModalProps) => {
+export const Modal = ({
+  isOpen,
+  onClose,
+  children,
+}: ModalProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className={`modal ${className}`}>
+    <div role="modal" className="modal">
       <div className="modal-content">
         <span className="close" onClick={onClose}>
           &times;

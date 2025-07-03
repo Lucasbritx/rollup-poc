@@ -5,6 +5,13 @@ import { Modal } from "../index";
 
 describe("Input Component", () => {
   it("should render properly", () => {
+    render(<Modal isOpen>
+      <div>
+      </div>
+    </Modal>);
+    expect(screen.getByRole("modal")).toBeInTheDocument();
+  });
+  it("should render with correct children", () => {
     render(
       <Modal isOpen>
         <input type="text" placeholder="input" />
@@ -12,11 +19,8 @@ describe("Input Component", () => {
     );
     expect(screen.getByRole("textbox")).toBeVisible();
   });
+  
 /* 
-  it("should render with the correct label", () => {
-    render(<Modal label="input" />);
-    expect(screen.getByText("input")).toBeInTheDocument();
-  });
 
   it("should apply className correctly", () => {
     const testClass = "test-input-class";
