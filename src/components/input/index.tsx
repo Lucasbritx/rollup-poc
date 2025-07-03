@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 
-// TODO add tests
-export const Input = ({ value, onChange, className, placeholder }) => {
+type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
+  label?: string;
+};
+
+export const Input = ({ label, ...props }: InputProps) => {
   return (
-    <input
-      type="text"
-      value={value}
-      onChange={onChange}
-      className={className}
-      placeholder={placeholder}
-    />
+    <div>
+      {label && <label>{label}</label>}
+      <input type="text" {...props} />
+    </div>
   );
 };
 
