@@ -18,3 +18,10 @@ This project uses **Rollup.js** – a module bundler for JavaScript – to bundl
 
 ```bash
 npm install --save-dev rollup
+
+
+## TODO list
+Add SASS
+Consumer using different types of CSS
+Which is the easier way to use the components
+Learn how vite uses rollup under the hood (which plugins, etc)
