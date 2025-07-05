@@ -18,6 +18,11 @@ export default {
       format: "esm",
     },
   ],
+  input: "src/index.css",
+  output: {
+    file: "dist/style.css",
+    format: "es",
+  },
   plugins: [
     peerDepsExternal(),
     resolve({
@@ -26,14 +31,18 @@ export default {
     commonjs(),
     postcss({
       modules: false,
-      extract: false,
+      extract: true,
       minimize: true,
     }),
     babel({
       exclude: "node_modules/**",
       babelHelpers: "bundled",
       extensions: [".js", ".jsx", ".ts", ".tsx"],
-      presets: ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
+      presets: [
+        "@babel/preset-env",
+        "@babel/preset-react",
+        "@babel/preset-typescript",
+      ],
     }),
     terser(),
   ],
