@@ -5,6 +5,7 @@ import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
+import sass from 'rollup-plugin-sass';
 
 export default [
   {
@@ -57,6 +58,7 @@ export default [
           skipLibCheck: true,
         },
       }),
+      sass()
     ],
     external: [
       "react", 
