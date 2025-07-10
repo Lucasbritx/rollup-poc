@@ -61,6 +61,7 @@
     "rollup-plugin-dts": "^6.2.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-sass": "^1.15.3",
     "ts-jest": "^29.4.0"
   }
 }
