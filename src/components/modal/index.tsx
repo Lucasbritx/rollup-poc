@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css";
 
 type ModalProps = {
   isOpen: boolean;

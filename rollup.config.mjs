@@ -8,6 +8,7 @@ import dts from "rollup-plugin-dts";
 import sass from 'rollup-plugin-sass';
 
 export default [
+  // JavaScript
   {
     input: "src/index.tsx",
     output: [
@@ -27,11 +28,6 @@ export default [
         extensions: [".js", ".jsx", ".ts", ".tsx"],
       }),
       commonjs(),
-      postcss({
-        modules: false,
-        extract: true,
-        minimize: true,
-      }),
       babel({
         exclude: "node_modules/**",
         babelHelpers: "bundled",
@@ -46,6 +42,7 @@ export default [
     ],
     external: ["react", "react-dom"],
   },
+  // TypeScript
   {
     input: "src/index.tsx",
     output: {
@@ -58,12 +55,25 @@ export default [
           skipLibCheck: true,
         },
       }),
-      sass()
     ],
     external: [
       "react", 
       "react-dom",
       /\.css$/,
+    ],
+  },
+  // CSS
+  {
+    input: "src/modal.css",
+    output: {
+      file: "dist/modal.css",
+    },
+    plugins: [
+      postcss({
+        modules: false,
+        extract: true,
+        minimize: true,
+      }),
     ],
   },
 ];
