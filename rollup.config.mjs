@@ -64,9 +64,9 @@ export default [
   },
   // CSS
   {
-    input: "src/modal.css",
+    input: "src/components/modal/index.css",
     output: {
-      file: "dist/modal.css",
+      file: "dist/modal/index.css",
     },
     plugins: [
       postcss({
