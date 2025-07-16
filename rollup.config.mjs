@@ -5,7 +5,6 @@ import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
-import sass from 'rollup-plugin-sass';
 
 export default [
   // JavaScript
@@ -74,6 +73,34 @@ export default [
     input: "src/components/modal/index.scss",
     output: {
       file: "dist/modal/index.css",
+    },
+    plugins: [
+      postcss({
+        extensions: ['.css', '.scss'],
+        extract: true,
+        minimize: true,
+        use: ['sass'],
+      }),
+    ],
+  },
+  {
+    input: "src/components/button/index.scss",
+    output: {
+      file: "dist/button/index.css",
+    },
+    plugins: [
+      postcss({
+        extensions: ['.css', '.scss'],
+        extract: true,
+        minimize: true,
+        use: ['sass'],
+      }),
+    ],
+  },
+  {
+    input: "src/components/input/index.scss",
+    output: {
+      file: "dist/input/index.css",
     },
     plugins: [
       postcss({
