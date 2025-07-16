@@ -8,7 +8,7 @@ export const Input = ({ label, ...props }: InputProps) => {
   return (
     <div>
       {label && <label>{label}</label>}
-      <input type="text" {...props} />
+      <input className="form-control" type="text" {...props} />
     </div>
   );
 };
