@@ -1,0 +1,42 @@
+$button-padding: 0.5rem 1rem;
+$button-border-radius: 0.25rem;
+$button-font-weight: 500;
+$button-transition: all 0.15s ease-in-out;
+$button-primary-bg: #007bff;
+$button-primary-border: #007bff;
+$button-primary-color: #fff;
+$button-primary-hover-bg: #0056b3;
+
+.btn {
+  display: inline-block;
+  padding: $button-padding;
+  border-radius: $button-border-radius;
+  font-weight: $button-font-weight;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: $button-transition;
+  
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  &:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+  
+  &.btn-primary {
+    background-color: $button-primary-bg;
+    border-color: $button-primary-border;
+    color: $button-primary-color;
+    
+    &:hover:not(:disabled) {
+      background-color: $button-primary-hover-bg;
+      border-color: $button-primary-hover-bg;
+    }
+  }
+}
