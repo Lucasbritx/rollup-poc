@@ -1,6 +1,6 @@
 {
   "name": "rollup-ds-poc",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Simple DS poc using rollup js",
   "keywords": [],
   "homepage": "https://github.com/Lucasbritx/rollup-poc#readme",
@@ -24,7 +24,9 @@
       "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./modal": "./dist/modal/index.css"
+    "./modal": "./dist/modal/index.css",
+    "./button": "./dist/button/index.css",
+    "./input": "./dist/input/index.css"
   },
   "files": [
     "dist"
