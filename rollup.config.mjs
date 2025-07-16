@@ -3,6 +3,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
 import sass from 'rollup-plugin-sass';
 
@@ -27,11 +28,11 @@ export default [
         extensions: [".js", ".jsx", ".ts", ".tsx"],
       }),
       commonjs(),
-      sass({
-        output: "dist/index.css",
-        options: {
-          outputStyle: "compressed",
-        },
+      postcss({
+        extensions: ['.css', '.scss'],
+        extract: "index.css",
+        minimize: true,
+        use: ['sass'],
       }),
       babel({
         exclude: "node_modules/**",
@@ -75,11 +76,11 @@ export default [
       file: "dist/modal/index.css",
     },
     plugins: [
-      sass({
-        output: "dist/modal/index.css",
-        options: {
-          outputStyle: "compressed",
-        },
+      postcss({
+        extensions: ['.css', '.scss'],
+        extract: true,
+        minimize: true,
+        use: ['sass'],
       }),
     ],
   },
