@@ -22,8 +22,4 @@ npm install --save-dev rollup
 ## Vite
 Vite uses Rollup to bundle the application for production.
 
-## TODO list
-Add SASS
-Consumer using different types of CSS
-Which is the easier way to use the components
 
