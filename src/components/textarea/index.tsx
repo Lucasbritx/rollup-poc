@@ -1,7 +1,8 @@
 import React from "react";
 
-// TODO add tests
-export const Textarea = ({ value, onChange, className, placeholder }) => {
+export type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+
+export const Textarea = ({ value, onChange, className, placeholder }: TextareaProps) => {
   return (
     <textarea
       value={value}
