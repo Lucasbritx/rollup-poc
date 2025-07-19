@@ -1,7 +1,18 @@
 import React from 'react';
 
-// TODO add tests
-export const Select = ({ options, value, onChange, className }) => {
+interface SelectOption {
+  value: string;
+  label: string;
+}
+
+type SelectProps = {
+  options: SelectOption[];
+  value: string;
+  onChange: (value: string) => void;
+  className?: string;
+};
+
+export const Select = ({ options, value, onChange, className }: SelectProps) => {
   return (
     <select
       className={className}
