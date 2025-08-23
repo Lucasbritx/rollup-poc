@@ -45,6 +45,9 @@ npm run build:webpack-all
 
 
 ### 🔍 Key Differences
+
+![alt text](image.png)
+
 | Feature | Rollup | Webpack |
 |---------|--------|---------|
 | **Config Complexity** | Simple (115 lines) | Complex (200+ lines) |
