@@ -46,7 +46,11 @@ npm run build:webpack-all
 
 ### 🔍 Key Differences
 
+Rollup bundle size:
 ![alt text](image.png)
+
+Webpack bundle size:
+![alt text](image-1.png)
 
 | Feature | Rollup | Webpack |
 |---------|--------|---------|
