@@ -5,6 +5,7 @@ import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
+import filesize from "rollup-plugin-filesize";
 
 export default [
   // JavaScript
@@ -44,6 +45,7 @@ export default [
         ],
       }),
       terser(),
+      filesize(),
     ],
     external: ["react", "react-dom"],
   },
