@@ -33,13 +33,6 @@ This project includes both Rollup and Webpack configurations for comparison purp
 - **Rollup**: `rollup.config.mjs` - Simple, focused on library bundling
 - **Webpack**: `webpack.config.js` + `webpack.types.config.js` - More complex, application-oriented
 
-### 🔍 Key Differences
-| Feature | Rollup | Webpack |
-|---------|--------|---------|
-| **Config Complexity** | Simple (115 lines) | Complex (200+ lines) |
-| **Bundle Size** | Smaller | Slightly larger |
-| **Tree Shaking** | Excellent built-in | Good with config |
-| **Learning Curve** | Easy | Steeper |
 
 ### 🚀 Build Commands
 ```bash
@@ -49,5 +42,14 @@ npm run build
 # Webpack
 npm run build:webpack-all
 ```
+
+
+### 🔍 Key Differences
+| Feature | Rollup | Webpack |
+|---------|--------|---------|
+| **Config Complexity** | Simple (115 lines) | Complex (200+ lines) |
+| **Bundle Size** | Smaller | Slightly larger |
+| **Tree Shaking** | Excellent built-in | Good with config |
+| **Learning Curve** | Easy | Steeper |
 
 
