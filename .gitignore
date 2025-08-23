@@ -28,3 +28,6 @@ coverage/
 
 # Optional: logs
 *.log
+
+# dist folder
+dist/
