@@ -10,19 +10,20 @@ type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
 };
 declare const Input: ({ label, ...props }: InputProps) => React.JSX.Element;
 
-declare const Select: ({ options, value, onChange, className }: {
-    options: any;
-    value: any;
-    onChange: any;
-    className: any;
-}) => React.JSX.Element;
+interface SelectOption {
+    value: string;
+    label: string;
+}
+type SelectProps = {
+    options: SelectOption[];
+    value: string;
+    onChange: (value: string) => void;
+    className?: string;
+};
+declare const Select: ({ options, value, onChange, className }: SelectProps) => React.JSX.Element;
 
-declare const Textarea: ({ value, onChange, className, placeholder }: {
-    value: any;
-    onChange: any;
-    className: any;
-    placeholder: any;
-}) => React.JSX.Element;
+type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+declare const Textarea: ({ value, onChange, className, placeholder }: TextareaProps) => React.JSX.Element;
 
 interface RadioOption {
     value: string;

@@ -45,7 +45,6 @@ module.exports = [
       library: {
         type: "commonjs2",
       },
-      clean: true,
     },
     externals: {
       react: "react",
