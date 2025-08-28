@@ -40,7 +40,7 @@ module.exports = [
     mode: "production",
     entry: "./src/index.tsx",
     output: {
-      path: path.resolve(__dirname, "dist"),
+      path: path.resolve(__dirname, "dist-webpack"),
       filename: "index.js",
       library: {
         type: "commonjs2",
@@ -90,7 +90,7 @@ module.exports = [
     mode: "production",
     entry: "./src/index.tsx",
     output: {
-      path: path.resolve(__dirname, "dist"),
+      path: path.resolve(__dirname, "dist-webpack"),
       filename: "index.es.js",
       library: {
         type: "module",
